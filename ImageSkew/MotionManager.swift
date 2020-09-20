@@ -12,16 +12,11 @@ class MotionManager: ObservableObject {
 
     private var motionManager: CMMotionManager
     var referenceAttitude: CMAttitude?
-    @Published
-    var x: Double = 0.0
-    @Published
-    var y: Double = 0.0
-    @Published
-    var z: Double = 0.0
-    @Published
-    var magnitude: Double = 0.0
-
-
+    @Published var x: Double = 0.0
+    @Published var y: Double = 0.0
+    @Published var z: Double = 0.0
+    @Published var magnitude: Double = 0.0
+    
     init() {
         self.motionManager = CMMotionManager()
         self.motionManager.deviceMotionUpdateInterval = 1/100

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var motionManager = MotionManager()
-    private var maxDegrees: Double = 30
+    private let maxDegrees: Double = 30 // clip max rotation angle
+    private let rotationScale: Double = 0.5
     var body: some View {
         ZStack {
             Color.white
@@ -20,12 +21,9 @@ struct ContentView: View {
                     .foregroundColor(.blue)
                     .frame(width: 300, height: 600)
                     .rotation3DEffect(
-                        max(min(Angle.radians(motionManager.magnitude / 2), Angle.degrees(maxDegrees)), Angle.degrees(-maxDegrees))
+                        max(min(Angle.radians(motionManager.magnitude * rotationScale), Angle.degrees(maxDegrees)), Angle.degrees(-maxDegrees))
                         ,
-                        axis: (x: CGFloat(-1 * motionManager.x), y: CGFloat(-1 * motionManager.y), z: 0.0),
-                        anchor: .center,
-                        anchorZ: 0,
-                        perspective: 1.0
+                        axis: (x: CGFloat(motionManager.x), y: CGFloat(motionManager.y), z: 0.0)
                     )
                     .shadow(radius: 10)
                 Button(action: {
@@ -34,7 +32,7 @@ struct ContentView: View {
                     }
                 }) {
                     Label("Stop Updates", systemImage: "octagon.fill")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .font(.title)
                 }
                 .padding()
                 .background(Color.red)
