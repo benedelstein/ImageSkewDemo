@@ -12,7 +12,19 @@
 		560D870E24C4E1E6009AEB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560D870D24C4E1E6009AEB33 /* Assets.xcassets */; };
 		560D871124C4E1E6009AEB33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560D871024C4E1E6009AEB33 /* Preview Assets.xcassets */; };
 		560D871924C4E21E009AEB33 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D871824C4E21E009AEB33 /* MotionManager.swift */; };
+		BB0001012AC4E400009AEB33 /* MotionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0001002AC4E400009AEB33 /* MotionManagerTests.swift */; };
+		BB0001022AC4E400009AEB33 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00010F2AC4E400009AEB33 /* ContentViewTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB0001032AC4E400009AEB33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 560D86FE24C4E1E4009AEB33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 560D870524C4E1E4009AEB33;
+			remoteInfo = ImageSkew;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		560D870624C4E1E4009AEB33 /* ImageSkew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSkew.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +34,20 @@
 		560D871024C4E1E6009AEB33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		560D871224C4E1E6009AEB33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560D871824C4E21E009AEB33 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		BB0001042AC4E400009AEB33 /* ImageSkewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSkewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0001002AC4E400009AEB33 /* MotionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerTests.swift; sourceTree = "<group>"; };
+		BB00010F2AC4E400009AEB33 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		560D870324C4E1E4009AEB33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB0001052AC4E400009AEB33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				560D870824C4E1E4009AEB33 /* ImageSkew */,
+				BB0001062AC4E400009AEB33 /* ImageSkewTests */,
 				560D870724C4E1E4009AEB33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				560D870624C4E1E4009AEB33 /* ImageSkew.app */,
+				BB0001042AC4E400009AEB33 /* ImageSkewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +96,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BB0001062AC4E400009AEB33 /* ImageSkewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB0001002AC4E400009AEB33 /* MotionManagerTests.swift */,
+				BB00010F2AC4E400009AEB33 /* ContentViewTests.swift */,
+			);
+			path = ImageSkewTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,6 +125,23 @@
 			productReference = 560D870624C4E1E4009AEB33 /* ImageSkew.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BB0001072AC4E400009AEB33 /* ImageSkewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB00010A2AC4E400009AEB33 /* Build configuration list for PBXNativeTarget "ImageSkewTests" */;
+			buildPhases = (
+				BB0001082AC4E400009AEB33 /* Sources */,
+				BB0001052AC4E400009AEB33 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB0001092AC4E400009AEB33 /* PBXTargetDependency */,
+			);
+			name = ImageSkewTests;
+			productName = ImageSkewTests;
+			productReference = BB0001042AC4E400009AEB33 /* ImageSkewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -103,6 +153,10 @@
 				TargetAttributes = {
 					560D870524C4E1E4009AEB33 = {
 						CreatedOnToolsVersion = 12.0;
+					};
+					BB0001072AC4E400009AEB33 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 560D870524C4E1E4009AEB33;
 					};
 				};
 			};
@@ -120,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				560D870524C4E1E4009AEB33 /* ImageSkew */,
+				BB0001072AC4E400009AEB33 /* ImageSkewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -147,7 +202,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB0001082AC4E400009AEB33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB0001012AC4E400009AEB33 /* MotionManagerTests.swift in Sources */,
+				BB0001022AC4E400009AEB33 /* ContentViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB0001092AC4E400009AEB33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 560D870524C4E1E4009AEB33 /* ImageSkew */;
+			targetProxy = BB0001032AC4E400009AEB33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		560D871324C4E1E6009AEB33 /* Debug */ = {
@@ -310,6 +382,48 @@
 			};
 			name = Release;
 		};
+		BB00010B2AC4E400009AEB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZJWAQAQHL;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bedelstein.ImageSkewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageSkew.app/ImageSkew";
+			};
+			name = Debug;
+		};
+		BB00010C2AC4E400009AEB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZJWAQAQHL;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bedelstein.ImageSkewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageSkew.app/ImageSkew";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +441,15 @@
 			buildConfigurations = (
 				560D871624C4E1E6009AEB33 /* Debug */,
 				560D871724C4E1E6009AEB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB00010A2AC4E400009AEB33 /* Build configuration list for PBXNativeTarget "ImageSkewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB00010B2AC4E400009AEB33 /* Debug */,
+				BB00010C2AC4E400009AEB33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
